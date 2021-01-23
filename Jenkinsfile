@@ -1,15 +1,15 @@
-library identifier: 'parameterLibrary@day-2', retriever: modernSCM(
+library identifier: 'parameterLibrary@day-3', retriever: modernSCM(
   [$class: 'GitSCMSource',
    remote: 'https://github.com/sefs93/jenkins-parameters-shared-library.git'])
 
 properties([
     parameters([
-        choice(name: 'COUNTRY', choices: ['USA', 'AUS', 'MEX']),
-        choice(name: 'ENVIRONMENT', choices: ['dev', 'qa', 'uat']),
-        choice(name: 'REGION', choices: ['us-east-1', 'sa-west-1', 'au-north-1']),
-        string(name: 'SERVICE_NAME'),
-        string(name: 'SERVICE_VERSION'),
-        booleanParam(name: 'RELOAD_PARAMETERS', defaultValue: false)
+        params_COUNTRY(),
+        params_ENVIRONMENT(),
+        params_REGION(),
+        params_SERVICE_NAME(),
+        params_SERVICE_VERSION(),
+        params_RELOAD_PARAMETERS()
     ])
 ])
 
