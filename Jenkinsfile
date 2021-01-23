@@ -1,4 +1,4 @@
-library identifier: 'parameterLibrary@day-6', retriever: modernSCM(
+library identifier: 'parameterLibrary@day-7', retriever: modernSCM(
   [$class: 'GitSCMSource',
    remote: 'https://github.com/sefs93/jenkins-parameters-shared-library.git'])
 
