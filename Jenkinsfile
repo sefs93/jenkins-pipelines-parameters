@@ -1,15 +1,16 @@
-library identifier: 'parameterLibrary@day-5', retriever: modernSCM(
+library identifier: 'parameterLibrary@day-6', retriever: modernSCM(
   [$class: 'GitSCMSource',
    remote: 'https://github.com/sefs93/jenkins-parameters-shared-library.git'])
 
 properties([
     parameters([
-        params_COUNTRY(),
-        params_ENVIRONMENT(),
-        params_REGION(),
-        params_SERVICE_NAME(),
-        params_SERVICE_VERSION(),
-        params_RELOAD_PARAMETERS()
+        example_params('COUNTRY'),
+        example_params('ENVIRONMENT'),
+        example_params('REGION'),
+        example_params('SERVICE_NAME'),
+        example_params('SERVICE_VERSION'),
+        example_params('RELOAD_PARAMETERS'),
+        example_params('TEST_NON_EXISTING')
     ])
 ])
 
